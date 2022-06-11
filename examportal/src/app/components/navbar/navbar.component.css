@@ -1,0 +1,14 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.mynavbar{
+  -webkit-box-shadow: 10px 10px 126px -6px rgba(63,39,245,1);
+-moz-box-shadow: 10px 10px 126px -6px rgba(63,39,245,1);
+box-shadow: 10px 10px 126px -6px rgba(63,39,245,1);
+
+}
+.my{
+  font-size:30px ;
+
+  position: relative;
+}

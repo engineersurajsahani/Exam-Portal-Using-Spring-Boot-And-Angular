@@ -1,0 +1,50 @@
+<mat-card *ngFor="let c of quizzes" class="mt-3">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ c.title }}</mat-card-title>
+    <mat-card-subtitle>{{ c.category.title }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div>{{ c.description }}</div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button
+      [routerLink]="'/admin/view-questions/' + c.qid + '/' + c.title"
+      mat-raised-button
+      color="warn"
+    >
+      Questions
+    </button>
+    <button mat-stroked-button color="warn">
+      Max Marks : {{ c.maxMarks }}
+    </button>
+    <button mat-stroked-button color="warn">
+      Number Of Questions : {{ c.numberOfQuestions }}
+    </button>
+    <button mat-stroked-button color="warn" *ngIf="c.active">
+      Quiz Is Active
+    </button>
+    <button mat-stroked-button color="warn" *ngIf="!c.active">
+      Quiz Is Not Active
+    </button>
+
+    <button
+      mat-raised-button
+      color="warn"
+      [routerLink]="'/admin/quiz/' + c.qid"
+    >
+      Update
+    </button>
+
+    <button mat-raised-button color="warn" (click)="deleteQuiz(c.qid)">
+      Delete
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<div class="container text-center mt-3">
+  <button mat-raised-button color="warn" routerLink="/admin/add-quiz">
+    Add New Quiz
+  </button>
+</div>

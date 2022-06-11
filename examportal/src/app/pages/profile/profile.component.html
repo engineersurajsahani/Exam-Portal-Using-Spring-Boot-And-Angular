@@ -1,0 +1,99 @@
+<mat-card class="example-card text-center">
+  <mat-card-subtitle></mat-card-subtitle>
+  <mat-card-title>Your Profile Details</mat-card-title>
+  <mat-card-content>
+    <div class="bootstrap-wrapper mt">
+      <div class="container">
+        <div class="container mb-3">
+          <img
+            class="rounded-circle image"
+            src="../../../assets/suraj.jpeg"
+            alt=""
+            style="height: 150px; width: 180px; margin-top: 15px"
+          />
+          <div class="spin spinner"></div>
+        </div>
+        <h4>Suraj Sahani</h4>
+
+        <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+
+        <div class="row mt-3">
+          <div class="col-md-10 offset-md-1">
+            <table class="table align-middle mb-0 bg-white text-center">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1 display-5">Username</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="fw-normal mb-1">{{ user.username }}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1 display-5">User ID</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="fw-normal mb-1">EXAM{{ user.id }}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1 dispaly-5">Phone</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="fw-normal mb-1">{{ user.phone }}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1 display-5">Role</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="fw-normal mb-1">
+                      {{ user.authorities[0].authority }}
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <div class="ms-3">
+                        <p class="fw-bold mb-1 display-5">Status</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="fw-normal mb-1">
+                      {{ user.enabled ? "ACTIVE" : "NOT-ACTIVE" }}
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+
+  <mat-card-footer> </mat-card-footer>
+</mat-card>

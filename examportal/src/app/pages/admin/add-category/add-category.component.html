@@ -1,0 +1,55 @@
+<mat-card>
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-3 text-center">
+            <div class="container mb-3">
+              <img
+                class="rounded-circle image"
+                src="../../../assets/suraj.jpeg"
+                alt=""
+                style="height: 150px; width: 180px; margin-top: 15px"
+              />
+              <div class="spin spinner"></div>
+            </div>
+            <h1>Add New Category</h1>
+            <form #addCategory="ngForm">
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-label>Title</mat-label>
+                <input
+                  type="text"
+                  name="title"
+                  [(ngModel)]="category.title"
+                  id=""
+                  matInput
+                  placeholder="Enter Title"
+                  required
+                />
+              </mat-form-field>
+
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-label>Description</mat-label>
+                <input
+                  type="text"
+                  name="description"
+                  [(ngModel)]="category.description"
+                  id=""
+                  matInput
+                  row="15"
+                  placeholder="Enter Description"
+                  required
+                />
+              </mat-form-field>
+              <div class="form-group text-center">
+                <button mat-raised-button color="warn" (click)="onSubmit()">
+                  ADD Category
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

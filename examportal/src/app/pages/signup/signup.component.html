@@ -1,0 +1,200 @@
+<div class="container register">
+  <div class="row">
+    <div class="col-md-9 register-right">
+      <ul
+        class="nav nav-tabs nav-justified float-left"
+        id="myTab"
+        role="tablist"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            id="home-tab"
+            data-toggle="tab"
+            href="#home"
+            role="tab"
+            aria-controls="home"
+            aria-selected="true"
+            >Register</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="profile-tab"
+            data-toggle="tab"
+            href="#profile"
+            role="tab"
+            aria-controls="profile"
+            aria-selected="false"
+            >About</a
+          >
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <h3 class="register-heading text-light">
+            Register Your Self For Examination
+          </h3>
+          <form
+            #registerForm="ngForm"
+            (ngSubmit)="onSubmit()"
+            class="needs-validation"
+            novalidate
+          >
+            <div class="row register-form">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="User Name *"
+                    value=""
+                    name="username"
+                    [(ngModel)]="user.username"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last Name *"
+                    value=""
+                    name="lastName"
+                    [(ngModel)]="user.lastName"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    minlength="10"
+                    maxlength="10"
+                    placeholder="Phone *"
+                    value=""
+                    name="phone"
+                    [(ngModel)]="user.phone"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="First Name *"
+                    value=""
+                    name="firstName"
+                    [(ngModel)]="user.firstName"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email *"
+                    value=""
+                    name="email"
+                    [(ngModel)]="user.email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password *"
+                    value=""
+                    name="password"
+                    [(ngModel)]="user.password"
+                    required
+                  />
+                </div>
+
+                <input type="reset" class="btnRegister" value="Reset" />
+                <input type="submit" class="btnRegister" value="Register" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div
+          class="tab-pane fade show text-light"
+          id="profile"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+        >
+          <h3 class="register-heading text-light">About Suraj Sahani</h3>
+          <div class="row register-form">
+            <div class="col-md-6">
+              <div class="form-group">
+                <p>Name :</p>
+              </div>
+
+              <div class="form-group">
+                <p>Aim :</p>
+              </div>
+
+              <div class="form-group">
+                <p>Favourite Backend Languages :</p>
+              </div>
+
+              <div class="form-group">
+                <p>Favourite Fronted Technology :</p>
+              </div>
+              <div class="form-group">
+                <p>Experience Of Web Development :</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <p>Suraj Sahani</p>
+              </div>
+
+              <div class="form-group">
+                <p>Become A Full Stack Web Developer</p>
+              </div>
+
+              <div class="form-group">
+                <p>Java & Python</p>
+              </div>
+
+              <div class="form-group">
+                <p>Angular & React</p>
+              </div>
+
+              <div class="form-group">
+                <p>1 YEAR</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 register-left">
+      <div class="container text-center mt-3">
+        <img
+          class="img-thumbnail"
+          src="../../../assets/myjava.png"
+          alt=""
+          style="height: 150px; width: 180px"
+        />
+      </div>
+      <h3>Welcome</h3>
+      <p>You are some steps away from your Exam!</p>
+      <input
+        class="text-center bg-primary text-light"
+        name=""
+        value="Suraj Sahani"
+      /><br />
+    </div>
+  </div>
+</div>
